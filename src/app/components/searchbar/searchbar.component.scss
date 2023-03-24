@@ -1,0 +1,40 @@
+.wrapper {
+    width: 100%;
+    position: relative;
+
+    input {
+        background-color: transparent;
+        background-color: #fbf5ee;
+        border-radius: 90px;
+        padding: 8px 16px;
+        padding-left: 50px;
+        width: 100%;
+        border: none;
+        color: var(--color-black);
+        font-weight: 300;
+        &::placeholder {
+            color: var(--color-main);
+            opacity: 0.7;
+        }
+        &:focus{
+            outline: solid 1px var(--color-main);
+        }
+    }
+    
+    .img-wrapper {
+        height: 100%;
+        width: 50px;
+        position: absolute;
+        left: 2px;
+        top: 50%;
+        border-radius: 0 70px 70px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-50%);
+        padding-right: 6px;
+        img {
+            width: 20px
+        }
+    }
+}

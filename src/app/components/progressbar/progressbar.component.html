@@ -1,0 +1,18 @@
+<div class="blur">
+
+    <div class="container ">
+        <div class=" flex">
+            <button (click)="previous()">Back</button>
+            <button (click)="next()">Continue</button>
+        </div>
+
+        <div class="bar">
+            <div [ngStyle]="{'width': percent + '%'}" class="fill">
+            </div>
+            <div [ngStyle]="{'left': (percent-2) + '%'}" class="circle">
+                <p id="number">{{percent}}%</p>
+            </div>
+        </div>
+
+    </div>
+</div>

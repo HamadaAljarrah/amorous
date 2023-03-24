@@ -1,0 +1,4 @@
+<div *ngIf="src && name" class="wrapper">
+    <img appLazyLoadingImg (click)="action.emit()" src="{{src}}" alt="">
+    <p>{{name}}</p>
+</div>

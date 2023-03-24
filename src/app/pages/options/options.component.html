@@ -1,0 +1,9 @@
+<section class="section" [@fadeInOut]>
+    <div class="container ">
+        <h1 >Choose One Option</h1>
+        <div class="grid">
+            <app-option-card *ngFor="let option of options" [title]="option.title" [text]="option.text"
+                [btn]="option.btn" [route]="option.route" [icon]="option.icon" (action)="setOption(option.title)" ></app-option-card>
+        </div>
+    </div>
+</section>

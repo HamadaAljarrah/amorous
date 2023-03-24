@@ -1,0 +1,15 @@
+<div class="card" (click)="toggleSideBar()">
+    <img src="{{icon}}" alt="">
+    <h1>{{title}}</h1>
+</div>
+
+<div class="overly" (click)="toggleSideBar()" [ngClass]="{'overly-show': showSidebar}"></div>
+
+<div class="sidebar-wrapper"  [ngClass]="{'show': showSidebar}">
+    <div class="content">
+        <button class="close" (click)="toggleSideBar()">X</button>
+        <h1>{{title}}</h1>
+        <p>{{text}}</p>
+        <button class="btn-primary" (click)="action.emit()">{{btn}}</button>
+    </div>
+</div>

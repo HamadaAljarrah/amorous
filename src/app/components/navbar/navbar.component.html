@@ -1,0 +1,37 @@
+<nav class="navbar">
+    <div class="container">
+        <div class="flex">
+            <a routerLink="/">
+                <img class="img" src="../assets/img/logo.png" alt="">
+            </a>
+            <div>
+                <div class="icon-wrapper" (click)="toggleSideBar()">
+                    <img src="../../../assets/icons/Shopicon.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="overly" (click)="toggleSideBar()" [ngClass]="{'overly-show': showSidebar}"></div>
+
+<div class="sidebar-wrapper" [ngClass]="{'show': showSidebar}">
+    <div class="content">
+        <button class="close" (click)="toggleSideBar()">X</button>
+        <div class="choices">
+            <h3>Your Choices</h3>
+            <ul *ngIf="userChoice">
+                <li *ngIf="userChoice.option"><strong>Option: </strong> {{userChoice.option}}</li>
+                <li *ngIf="userChoice.gender"><strong>Gender: </strong> {{userChoice.gender}}</li>
+                <li *ngIf="userChoice.character"><strong>Character: </strong> {{userChoice.character}}</li>
+                <li *ngIf="userChoice.impression"><strong>Impression: </strong> {{userChoice.impression}}</li>
+                <li *ngIf="userChoice.ingridients"><strong>Ingridients: </strong> <p *ngFor="let ing of userChoice.ingridients">{{ing.name + "&nbsp;|&nbsp;"}}</p></li>
+                <li *ngIf="userChoice.bottle"><strong>Impression: </strong> {{userChoice.bottle}}</li>
+                <li *ngIf="userChoice.bottleText"><strong>Impression: </strong> {{userChoice.bottleText}}</li>
+                <li *ngIf="userChoice.box"><strong>Impression: </strong> {{userChoice.box}}</li>
+                <li *ngIf="userChoice.boxText"><strong>Impression: </strong> {{userChoice.boxText}}</li>
+            </ul>
+        </div>
+
+    </div>
+</div>

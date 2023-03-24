@@ -1,0 +1,64 @@
+.blur {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    // background: rgb(255, 255, 255,0.01);
+    // backdrop-filter: blur(10px);
+    height: auto;
+}
+
+button {
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+    outline: none;
+    border: none;
+    background-color: var(--color-main);
+    color: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.bar {
+    width: 100%;
+    height: 0.75rem;
+    position: relative;
+    background-color: var(--color-white);
+    box-shadow: 0 8px 16px rgba(33, 26, 0, 0.1);
+    border-radius: 100px;
+    transition: all 0.5s ease-in-out;
+
+    .fill {
+        position: absolute;
+        border-radius: 100px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: var(--color-main);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .circle {
+        width: 30px;
+        height: 30px;
+        background-color: var(--color-white);
+        box-shadow: 0 8px 16px rgba(33, 26, 0, 0.15);
+        border-radius: 1000px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        font-size: 0.75rem;
+        transform: translateY(-50%);
+        transition: all 0.5s ease-in-out;
+        p {
+            font-size: 0.6rem;
+        }
+    }
+}

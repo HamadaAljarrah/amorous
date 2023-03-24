@@ -1,1 +1,122 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --color-main: #d8a784;
+    --color-black: #333333;
+    --color-white: #fffefa;
+    --color-light: #f4f4f4;
+    --font-h: "Tangerine", cursive;;
+    --font-p: 'Work Sans', sans-serif;
+    background-color: var(--color-white);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-main);
+    font-family: var(--font-h);
+    font-size: 3rem;
+
+}
+
+h4,
+h5,
+h6,
+p {
+    color: var(--color-black);
+    font-family: var(--font-p);
+    font-size: 0.8rem;
+    line-height: 150%;
+}
+
+.section {
+    min-height: 100vh;
+    min-height: 100dvb;
+    overflow: hidden;
+    padding-top: 65px;
+    
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+}
+
+.btn-primary {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+    outline: none;
+    border: none;
+    background-color: var(--color-main);
+    color: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+    transition: all ease-in-out 0.2s;
+
+    &:hover {
+        background-color: var(--color-white);
+        border: solid 1px var(--color-main);
+        color: var(--color-main);
+    }
+}
+
+
+.sidebar-wrapper{
+    position: fixed;
+    inset: 0 0 0 0;
+    width: 100%;
+    transform: translateY(100vh);
+    transition: all 0.3s;
+    height: 100vh;
+    z-index: 11;
+    .content{
+        width: 100%;
+        height: 70%;
+        position: fixed;
+        padding: 40px 20px;
+        border-radius: 8px 8px 0 0 ;
+        left: 0;
+        bottom: 0;
+        background-color: var(--color-white);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        .close{
+            position: absolute;
+            background-color: transparent;
+            padding: 10px;
+            border: none;
+            color: var(--color-black);
+            font-weight: 700;
+            right: 10px;
+            top: 10px;
+        }
+    }
+    &.show{
+        transform: translateY(0);
+    
+    }
+}
+
+
+.overly{
+    position: absolute;
+    z-index: 10;
+    inset: 0 0 0 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(-100vh);
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    &.overly-show{
+        backdrop-filter: blur(8px);
+        transform: translateY(0);
+    }
+}

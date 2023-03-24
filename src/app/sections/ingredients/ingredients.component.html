@@ -1,0 +1,26 @@
+<section *ngIf="show" class="section" [@fadeInOut]>
+    <div class="container">
+        <div class="wrapper">
+            <div class="header">
+                <h1>Customize</h1>
+                <p>Choose ingredients, minimal 1 and maximal 5</p>
+                <div class="chips-container">
+                    <app-chips (action)="removeIngredient(ing)" *ngFor="let ing of chosenIngredients" [name]="ing.name" [src]="ing.img"></app-chips>
+                </div>
+                <div class="searchbar">
+                    <app-searchbar (action)="search($event)"></app-searchbar>
+                </div>
+            </div>
+            <div class="ingredients-wrapper">
+                <div class="grid" *ngIf="!searchText">
+                    <app-ingredient *ngFor="let ing of ingredients" [name]="ing.name" [src]="ing.img"
+                        (action)="addIngredient(ing)"></app-ingredient>
+                </div>
+                <div class="grid" *ngIf="searchText">
+                    <app-ingredient *ngFor="let ing of filteredIngredients" [name]="ing.name" [src]="ing.img"
+                        (action)="addIngredient(ing)"></app-ingredient>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,18 @@
+<section *ngIf="show" [@fadeInOut]>
+    <section class="image-section">
+        <div (click)="setOption('male')"  class="image-wrapper"
+            [ngClass]="{'active': selectedOption==='male' }">
+            <img id="male" class="image man" src="../../../assets/img/man.jpg" alt="Image 1">
+            <h1 class="header">Male</h1>
+            <img src="../../../assets/icons/chosen.svg" alt="checked" class="active-icon">
+        </div>
+
+        <div (click)="setOption('female')"  class="image-wrapper"
+        [ngClass]="{'active': selectedOption==='female' }">
+        <img id="female" class="image woman" src="../../../assets/img/woman.jpg" alt="Image 1">
+        <h1 >Female</h1>
+        <img src="../../../assets/icons/chosen.svg" alt="checked" class="active-icon">
+    </div>
+    </section>
+
+</section>

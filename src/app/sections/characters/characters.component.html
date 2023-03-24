@@ -1,0 +1,13 @@
+<section *ngIf="show" class="section" [@fadeInOut]>
+    <div class="container">
+        <div class="wrapper">
+            <h1>Chose One Character</h1>
+            <ul class="list">
+                <li *ngFor="let character of characters">
+                    <app-radio-input [checked]="selectedOption === character.value" (action)="setOption(character.value)" [id]="character.value"
+                        [text]="character.text"></app-radio-input>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
