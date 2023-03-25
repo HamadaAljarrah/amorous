@@ -62,7 +62,10 @@ export class UserChoiceService {
 
     setBottle(bottle: string): void {
         const current = this.choicesSource.getValue();
+        const firstIncrement = current['bottle'] == undefined;
         current['bottle'] = bottle;
+        if (firstIncrement)
+            this.percentSource.next(this.percentSource.getValue() + 12);
         this.choicesSource.next(current);
     }
 
@@ -95,8 +98,7 @@ export type BoxText = { front: string; back: string };
 export type Ingredient = {
     name: string;
     img: string;
-    value: string;
-}
+};
 
 export interface UserChoices {
     option: string;

@@ -16,6 +16,7 @@ export class ImpressionsComponent implements OnInit {
     impressions!: ImpressionContent;
     male = false;
     female = false;
+
     constructor(
         private myoNavService: MyoNavService,
         private userChoiceService: UserChoiceService
@@ -24,8 +25,8 @@ export class ImpressionsComponent implements OnInit {
     ngOnInit(): void {
         this.impressions = content;
         this.userChoiceService.choices$.subscribe((data) => {
-            this.female = data.gender === 'female';
-            this.male = data.gender === 'male';
+            this.female = data.gender === 'Female';
+            this.male = data.gender === 'Male';
         });
     }
     get show(): boolean {

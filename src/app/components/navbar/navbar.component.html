@@ -25,11 +25,11 @@
                 <li *ngIf="userChoice.gender"><strong>Gender: </strong> {{userChoice.gender}}</li>
                 <li *ngIf="userChoice.character"><strong>Character: </strong> {{userChoice.character}}</li>
                 <li *ngIf="userChoice.impression"><strong>Impression: </strong> {{userChoice.impression}}</li>
-                <li *ngIf="userChoice.ingridients"><strong>Ingridients: </strong> <p *ngFor="let ing of userChoice.ingridients">{{ing.name + "&nbsp;|&nbsp;"}}</p></li>
-                <li *ngIf="userChoice.bottle"><strong>Impression: </strong> {{userChoice.bottle}}</li>
-                <li *ngIf="userChoice.bottleText"><strong>Impression: </strong> {{userChoice.bottleText}}</li>
-                <li *ngIf="userChoice.box"><strong>Impression: </strong> {{userChoice.box}}</li>
-                <li *ngIf="userChoice.boxText"><strong>Impression: </strong> {{userChoice.boxText}}</li>
+                <li *ngIf="userChoice.ingridients"><strong>Ingridients: </strong> <span *ngFor="let ing of userChoice.ingridients">{{ing.name + ", &nbsp;"}}</span></li>
+                <li *ngIf="userChoice.bottle"><strong>Bottle: </strong> {{userChoice.bottle}}</li>
+                <li *ngIf="userChoice.bottleText"><strong>Bottle text: </strong> {{userChoice.bottleText}}</li>
+                <li *ngIf="userChoice.box"><strong>Box: </strong> {{userChoice.box}}</li>
+                <li *ngIf="userChoice.boxText"><strong>Box text: </strong> {{userChoice.boxText}}</li>
             </ul>
         </div>
 

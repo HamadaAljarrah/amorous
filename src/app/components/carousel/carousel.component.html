@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="items" class="carousel">
+
+        <div *nguCarouselDef="let item;" class="item">
+            <div class="tile">
+                <img [src]="item.img" alt="Carousel Item">
+            </div>
+        </div>
+    
+        <ng-template #carouselItem let-item>
+            <div *ngFor="let item of items">
+                <img [src]="item.img" alt="Carousel Item">
+            </div>
+        </ng-template>
+    
+        <button NguCarouselNext class="rightRs"><img src="../../../assets/icons/arrow.svg"></button>
+        <button NguCarouselPrev class="leftRs"><img src="../../../assets/icons/arrow.svg"></button>
+    
+        <ul class="point" NguCarouselPoint>
+            <li *ngFor="let j of myCarousel.pointNumbers; let i = index" [class.active]="i==myCarousel.activePoint"
+                (click)="myCarousel.moveTo(i)"></li>
+        </ul>
+    </ngu-carousel>
+    <button class="btn-primary btn" (click)="getCurrentBottle()">Choose</button>
+
+</div>

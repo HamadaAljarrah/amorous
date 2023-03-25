@@ -48,7 +48,6 @@ export class IngredientsComponent implements OnInit {
         if (this.chosenIngredients.length >= 5) return;
         this.chosenIngredients.push(ingredient);
         this.userChoiceService.setIngridients(this.chosenIngredients);
-        console.log(this.chosenIngredients);
     }
 
     removeIngredient(ingredient: Ingredient): void {

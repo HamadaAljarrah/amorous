@@ -22,36 +22,42 @@ import { ChipsComponent } from './components/chips/chips.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { IngredientComponent } from './components/ingredient/ingredient.component';
 import { LazyLoadingImgDirective } from './lazy-loading-img.directive';
+import { BottleComponent } from './sections/bottle/bottle.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { NguCarouselModule } from '@ngu/carousel';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LandingComponent,
-    MakeYourOwnComponent,
-    GenderComponent,
-    CharactersComponent,
-    OptionsComponent,
-    MakeGoodBetterComponent,
-    LetUsChooseComponent,
-    NavbarComponent,
-    ProgressbarComponent,
-    OptionCardComponent,
-    RadioInputComponent,
-    ImpressionsComponent,
-    IngredientsComponent,
-    ChipsComponent,
-    SearchbarComponent,
-    IngredientComponent,
-    LazyLoadingImgDirective,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        LandingComponent,
+        MakeYourOwnComponent,
+        GenderComponent,
+        CharactersComponent,
+        OptionsComponent,
+        MakeGoodBetterComponent,
+        LetUsChooseComponent,
+        NavbarComponent,
+        ProgressbarComponent,
+        OptionCardComponent,
+        RadioInputComponent,
+        ImpressionsComponent,
+        IngredientsComponent,
+        ChipsComponent,
+        SearchbarComponent,
+        IngredientComponent,
+        LazyLoadingImgDirective,
+        BottleComponent,
+        CarouselComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule,
+        NguCarouselModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

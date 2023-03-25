@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MyoNavService } from 'src/app/services/myo-nav.service';
 import { UserChoiceService } from 'src/app/services/user-choice.service';
 import { fadeInOut } from 'src/app/animation/onLoad';
-import { genders } from './genders';
+import { GenderHtml, genders } from './genders';
 @Component({
     selector: 'app-gender',
     templateUrl: './gender.component.html',
@@ -12,6 +12,7 @@ import { genders } from './genders';
 export class GenderComponent implements OnInit {
     @Input() showNum!: number;
     selectedOption = '';
+    genders: GenderHtml[] = [];
 
     constructor(
         private myoNavService: MyoNavService,
@@ -20,6 +21,7 @@ export class GenderComponent implements OnInit {
         this.userChoiceService.choices$.subscribe((data) => {
             this.selectedOption = data['gender'];
         });
+        this.genders = genders;
     }
 
     setOption(gender: string) {

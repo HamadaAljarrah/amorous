@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { fadeInOut } from 'src/app/animation/onLoad';
 import { MyoNavService } from 'src/app/services/myo-nav.service';
 import { UserChoiceService } from 'src/app/services/user-choice.service';
-import { characterContent, content } from './characters';
+import {  content } from './characters';
 
 @Component({
     selector: 'app-characters',
@@ -13,7 +13,7 @@ import { characterContent, content } from './characters';
 export class CharactersComponent implements OnInit {
     @Input() showNum!: number;
     selectedOption = '';
-    characters: characterContent[] = [];
+    characters: string[] = [];
 
     constructor(
         private myoNavService: MyoNavService,
@@ -24,6 +24,7 @@ export class CharactersComponent implements OnInit {
 
 
     ngOnInit(): void {}
+    
     get show(): boolean {
         return this.myoNavService.getCurrentComponent() === this.showNum;
     }

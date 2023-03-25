@@ -4,16 +4,16 @@
             <h1>Chose One Impression</h1>
             <ul class="list" *ngIf="male">
                 <li *ngFor="let impression of impressions.male">
-                    <app-radio-input [checked]="selectedOption === impression.value"
-                        (action)="setOption(impression.value)" [id]="impression.value"
-                        [text]="impression.text"></app-radio-input>
+                    <app-radio-input [checked]="selectedOption === impression"
+                        (action)="setOption(impression)" [id]="impression"
+                        [text]="impression"></app-radio-input>
                 </li>
             </ul>
             <ul class="list" *ngIf="female">
                 <li *ngFor="let impression of impressions.female">
-                    <app-radio-input [checked]="selectedOption === impression.value"
-                        (action)="setOption(impression.value)" [id]="impression.value"
-                        [text]="impression.text"></app-radio-input>
+                    <app-radio-input [checked]="selectedOption === impression"
+                        (action)="setOption(impression)" [id]="impression"
+                        [text]="impression"></app-radio-input>
                 </li>
             </ul>
         </div>

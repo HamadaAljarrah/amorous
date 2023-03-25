@@ -1,0 +1,6 @@
+<section *ngIf="show" class="section">
+    <div class="container">
+        <h1>Choose Bottle</h1>
+        <app-carousel (action)="setOption($event)" [items]="carouselItem"></app-carousel>
+    </div>
+</section>
