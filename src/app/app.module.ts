@@ -25,6 +25,7 @@ import { LazyLoadingImgDirective } from './lazy-loading-img.directive';
 import { BottleComponent } from './sections/bottle/bottle.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { NguCarouselModule } from '@ngu/carousel';
+import { HotToastModule } from '@ngneat/hot-toast';
 
 @NgModule({
     declarations: [
@@ -55,7 +56,15 @@ import { NguCarouselModule } from '@ngu/carousel';
         BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
-        NguCarouselModule
+        NguCarouselModule,
+        HotToastModule.forRoot({
+            style: {
+                borderRadius: '99px',
+                color: '#333333',
+                fontSize: '0.75rem',
+
+            },
+        }),
     ],
     providers: [],
     bootstrap: [AppComponent],

@@ -11,7 +11,7 @@ body {
     --color-black: #333333;
     --color-white: #fffefa;
     --color-light: #f4f4f4;
-    --font-h: "Tangerine", cursive;;
+    --font-h: 'Tangerine', cursive;
     --font-p: 'Work Sans', sans-serif;
     background-color: var(--color-white);
 }
@@ -22,7 +22,6 @@ h3 {
     color: var(--color-main);
     font-family: var(--font-h);
     font-size: 3rem;
-
 }
 
 h4,
@@ -40,10 +39,9 @@ p {
     min-height: 100dvb;
     overflow: hidden;
     padding-top: 65px;
-    
 }
 
-.container{
+.container {
     max-width: 1200px;
     width: 100%;
     padding: 10px;
@@ -68,8 +66,7 @@ p {
     }
 }
 
-
-.sidebar-wrapper{
+.sidebar-wrapper {
     position: fixed;
     inset: 0 0 0 0;
     width: 100%;
@@ -77,18 +74,18 @@ p {
     transition: all 0.3s;
     height: 100vh;
     z-index: 11;
-    .content{
+    .content {
         width: 100%;
         height: 70%;
         position: fixed;
         padding: 40px 20px;
-        border-radius: 8px 8px 0 0 ;
+        border-radius: 8px 8px 0 0;
         left: 0;
         bottom: 0;
         background-color: var(--color-white);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-        .close{
+        .close {
             position: absolute;
             background-color: transparent;
             padding: 10px;
@@ -99,14 +96,12 @@ p {
             top: 10px;
         }
     }
-    &.show{
+    &.show {
         transform: translateY(0);
-    
     }
 }
 
-
-.overly{
+.overly {
     position: absolute;
     z-index: 10;
     inset: 0 0 0 0;
@@ -115,8 +110,14 @@ p {
     transform: translateY(-100vh);
     background-color: rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
-    &.overly-show{
+    &.overly-show {
         backdrop-filter: blur(8px);
         transform: translateY(0);
     }
+}
+
+.hot-toast-bar-base {
+    font-family: var(--font-p);
+
+    
 }

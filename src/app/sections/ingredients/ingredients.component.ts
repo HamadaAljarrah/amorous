@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { HotToastService } from '@ngneat/hot-toast';
 import { fadeInOut } from 'src/app/animation/onLoad';
 import { MyoNavService } from 'src/app/services/myo-nav.service';
 import {
@@ -22,7 +23,8 @@ export class IngredientsComponent implements OnInit {
 
     constructor(
         private myoNavService: MyoNavService,
-        private userChoiceService: UserChoiceService
+        private userChoiceService: UserChoiceService,
+        private toast: HotToastService
     ) {}
 
     ngOnInit(): void {
@@ -45,7 +47,10 @@ export class IngredientsComponent implements OnInit {
 
     addIngredient(ingredient: Ingredient): void {
         if (this.ingredientExist(ingredient)) return;
-        if (this.chosenIngredients.length >= 5) return;
+        if (this.chosenIngredients.length >= 5){
+            this.toast.warning('You can choose max  5 ingredients')
+            return
+        };
         this.chosenIngredients.push(ingredient);
         this.userChoiceService.setIngridients(this.chosenIngredients);
     }

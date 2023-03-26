@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { fadeInOut } from 'src/app/animation/onLoad';
 import { CarouselItems } from 'src/app/components/carousel/carousel.component';
 import { MyoNavService } from 'src/app/services/myo-nav.service';
 import { UserChoiceService } from 'src/app/services/user-choice.service';
@@ -7,6 +8,7 @@ import { UserChoiceService } from 'src/app/services/user-choice.service';
     selector: 'app-bottle',
     templateUrl: './bottle.component.html',
     styleUrls: ['./bottle.component.scss'],
+    animations: [fadeInOut]
 })
 export class BottleComponent implements OnInit {
     @Input() showNum!: number;
