@@ -3,6 +3,7 @@ import { MyoNavService } from 'src/app/services/myo-nav.service';
 import { UserChoiceService } from 'src/app/services/user-choice.service';
 import { fadeInOut } from 'src/app/animation/onLoad';
 import { GenderHtml, genders } from './genders';
+import { HotToastService } from '@ngneat/hot-toast';
 @Component({
     selector: 'app-gender',
     templateUrl: './gender.component.html',
@@ -16,7 +17,8 @@ export class GenderComponent implements OnInit {
 
     constructor(
         private myoNavService: MyoNavService,
-        private userChoiceService: UserChoiceService
+        private userChoiceService: UserChoiceService,
+        private toast: HotToastService
     ) {
         this.userChoiceService.choices$.subscribe((data) => {
             this.selectedOption = data['gender'];
@@ -25,6 +27,8 @@ export class GenderComponent implements OnInit {
     }
 
     setOption(gender: string) {
+        this.toast.close();
+        this.toast.success('Gender set to ' + gender)
         this.userChoiceService.setGender(gender);
         this.selectedOption = gender;
     }

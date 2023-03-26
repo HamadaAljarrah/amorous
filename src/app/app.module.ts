@@ -26,6 +26,7 @@ import { BottleComponent } from './sections/bottle/bottle.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { NguCarouselModule } from '@ngu/carousel';
 import { HotToastModule } from '@ngneat/hot-toast';
+import { BottleDesignComponent } from './sections/bottle-design/bottle-design.component';
 
 @NgModule({
     declarations: [
@@ -49,6 +50,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
         LazyLoadingImgDirective,
         BottleComponent,
         CarouselComponent,
+        BottleDesignComponent,
     ],
     imports: [
         BrowserModule,
@@ -58,6 +60,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
         ReactiveFormsModule,
         NguCarouselModule,
         HotToastModule.forRoot({
+            duration: 3000,
             style: {
                 borderRadius: '99px',
                 color: '#333333',

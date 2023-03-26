@@ -24,23 +24,31 @@ export class MyoNavService {
         switch (this.currentComponent) {
             case 0:
                 if (this.userChoice.gender) {
+                    //this.toast.success('Gender saved.');
                     this.currentComponent++;
                 } else {
-                    this.toast.error('Choose a gender');
+                    this.toast.close();
+                    this.toast.error('Choose gender');
                 }
                 break;
             case 1:
                 if (this.userChoice.character) {
+                    //this.toast.success('Character saved.');
+
                     this.currentComponent++;
                 } else {
-                    this.toast.warning('Choose a character');
+                    this.toast.close();
+                    this.toast.error('Choose a character');
                 }
                 break;
             case 2:
                 if (this.userChoice.impression) {
+                    //this.toast.success('Impression saved.');
+
                     this.currentComponent++;
                 } else {
-                    this.toast.warning('Choose a impression');
+                    this.toast.close();
+                    this.toast.error('Choose impression');
                 }
                 break;
             case 3:
@@ -48,16 +56,21 @@ export class MyoNavService {
                     this.userChoice.ingridients &&
                     this.userChoice.ingridients.length > 0
                 ) {
+                    //this.toast.success('Ingredients added');
                     this.currentComponent++;
                 } else {
-                    this.toast.warning('Choose at least 1 ingredient');
+                    this.toast.close();
+                    this.toast.error('Choose at least 1 ingredient');
                 }
                 break;
             case 4:
                 if (this.userChoice.bottle) {
+                    //this.toast.success('Bottle saved.');
+
                     this.currentComponent++;
                 } else {
-                    this.toast.warning('Choose a bottle!');
+                    this.toast.close();
+                    this.toast.error('Choose bottle');
                 }
                 break;
             case 5:
@@ -65,9 +78,11 @@ export class MyoNavService {
                 break;
             case 6:
                 if (this.userChoice.box) {
+                    //this.toast.success('Box saved.');
                     this.currentComponent++;
                 } else {
-                    this.toast.warning('Choose a box!');
+                    this.toast.close();
+                    this.toast.error('Choose box');
                 }
                 break;
             case 7:

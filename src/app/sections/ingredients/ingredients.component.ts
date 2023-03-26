@@ -48,11 +48,14 @@ export class IngredientsComponent implements OnInit {
     addIngredient(ingredient: Ingredient): void {
         if (this.ingredientExist(ingredient)) return;
         if (this.chosenIngredients.length >= 5){
-            this.toast.warning('You can choose max  5 ingredients')
+            this.toast.close();
+            this.toast.warning('You can choose max 5 ingredients')
             return
         };
         this.chosenIngredients.push(ingredient);
         this.userChoiceService.setIngridients(this.chosenIngredients);
+        this.toast.close();
+        this.toast.success('Ingredient ' + ingredient.name + ' added')
     }
 
     removeIngredient(ingredient: Ingredient): void {

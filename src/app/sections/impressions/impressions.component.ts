@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { HotToastService } from '@ngneat/hot-toast';
 import { fadeInOut } from 'src/app/animation/onLoad';
 import { MyoNavService } from 'src/app/services/myo-nav.service';
 import { UserChoiceService } from 'src/app/services/user-choice.service';
@@ -8,7 +9,7 @@ import { content, ImpressionContent } from './impressions';
     selector: 'app-impressions',
     templateUrl: './impressions.component.html',
     styleUrls: ['./impressions.component.scss'],
-    animations: [fadeInOut]
+    animations: [fadeInOut],
 })
 export class ImpressionsComponent implements OnInit {
     @Input() showNum!: number;
@@ -19,7 +20,8 @@ export class ImpressionsComponent implements OnInit {
 
     constructor(
         private myoNavService: MyoNavService,
-        private userChoiceService: UserChoiceService
+        private userChoiceService: UserChoiceService,
+        private toast: HotToastService
     ) {}
 
     ngOnInit(): void {
@@ -34,6 +36,8 @@ export class ImpressionsComponent implements OnInit {
     }
 
     setOption(impression: string) {
+        this.toast.close();
+        this.toast.success('Impression set to ' + impression);
         this.userChoiceService.setImpression(impression);
         this.selectedOption = impression;
     }

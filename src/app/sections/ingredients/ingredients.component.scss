@@ -25,8 +25,9 @@
 
     .ingredients-wrapper {
         flex: 1;
-        overflow-y: auto;
+        overflow-x: auto;
         width: 100%;
+
         .grid {
             height: 42vh;
             row-gap: 10px;
@@ -34,5 +35,7 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
         }
+  
     }
+ 
 }
