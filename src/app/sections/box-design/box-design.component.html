@@ -1,0 +1,53 @@
+<section *ngIf="show" class="section">
+    <div class="container">
+        <h1>Design Your Box</h1>
+        <form>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="form-control">
+                        <label for="">Font</label>
+                        <div class="dropdown">
+                            <select (change)="setOption()" [(ngModel)]="selectedFont" name="selectedFont">
+                                <option *ngFor="let item of fonts" value="{{item.value}}">{{item.label}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label for="">Size</label>
+                        <div class="dropdown">
+                            <select (change)="setOption()" [(ngModel)]="selectedSize" name="selectedSize">
+                                <option *ngFor="let item of sizes" value="{{item.value}}">{{item.label}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label for="">Color</label>
+                        <div class="dropdown">
+                            <select (change)="setOption()" [(ngModel)]="selectedColor" name="selectedColor">
+                                <option *ngFor="let item of colors" value="{{item.value}}">{{item.label}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-control ">
+                        <label for="">Front text</label>
+                        <input (change)="setOption()" name="textFront" [(ngModel)]="textFront" type="text">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-control">
+                        <label for="">Back text</label>
+                        <input (change)="setOption()" name="textBack" [(ngModel)]="textBack" type="text">
+                    </div>
+                </div>
+            
+
+            </div>
+            <button class="btn-primary preview-btn" (click)="togglePreview()">Previews</button>
+        </form>
+
+
+    </div>
+</section>
+

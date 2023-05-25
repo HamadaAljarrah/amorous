@@ -1,0 +1,6 @@
+<section *ngIf="show" class="section" [@fadeInOut]>
+    <div class="container">
+        <h1>Choose Box</h1>
+        <app-carousel (action)="setOption($event)" [items]="carouselItem"></app-carousel>
+    </div>
+</section>

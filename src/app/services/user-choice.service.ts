@@ -71,13 +71,19 @@ export class UserChoiceService {
 
     setBottleText(bottleText: BottleText): void {
         const current = this.choicesSource.getValue();
+        const firstIncrement = current['bottleText'] == undefined;
         current['bottleText'] = bottleText;
+        if (firstIncrement)
+            this.percentSource.next(this.percentSource.getValue() + 12);
         this.choicesSource.next(current);
     }
 
     setBox(box: string): void {
         const current = this.choicesSource.getValue();
+        const firstIncrement = current['box'] == undefined;
         current['box'] = box;
+        if (firstIncrement)
+            this.percentSource.next(this.percentSource.getValue() + 12);
         this.choicesSource.next(current);
     }
 
@@ -101,7 +107,13 @@ export type BottleText = {
     fontSize: string;
     fontColor: string;
 };
-export type BoxText = { front: string; back: string };
+export type BoxText = {
+    front: string;
+    back: string;
+    fontStyle: string;
+    fontSize: string;
+    fontColor: string;
+};
 export type Ingredient = {
     name: string;
     img: string;

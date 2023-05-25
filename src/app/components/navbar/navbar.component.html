@@ -37,7 +37,13 @@
 
                 </li>
                 <li *ngIf="userChoice.box"><strong>Box: </strong> {{userChoice.box}}</li>
-                <li *ngIf="userChoice.boxText"><strong>Box text: </strong> {{userChoice.boxText}}</li>
+                <li *ngIf="userChoice.boxText"><strong>Box text: </strong> 
+                    Front: {{userChoice.boxText.front}}
+                    Back: {{userChoice.boxText.back}}
+                    Color: {{userChoice.boxText.fontColor}}
+                    Size: {{userChoice.boxText.fontSize}}
+                    Font: {{userChoice.boxText.fontStyle}}
+                </li>
             </ul>
         </div>
 

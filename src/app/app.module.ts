@@ -28,6 +28,8 @@ import { NguCarouselModule } from '@ngu/carousel';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { BottleDesignComponent } from './sections/bottle-design/bottle-design.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { BoxComponent } from './sections/box/box.component';
+import { BoxDesignComponent } from './sections/box-design/box-design.component';
 
 @NgModule({
     declarations: [
@@ -53,6 +55,8 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
         CarouselComponent,
         BottleDesignComponent,
         DropdownComponent,
+        BoxComponent,
+        BoxDesignComponent,
     ],
     imports: [
         BrowserModule,
