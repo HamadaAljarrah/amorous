@@ -37,7 +37,7 @@ export class ImpressionsComponent implements OnInit {
 
     setOption(impression: string) {
         this.toast.close();
-        this.toast.success('Impression set to ' + impression);
+        this.toast.success('Selected ' + impression);
         this.userChoiceService.setImpression(impression);
         this.selectedOption = impression;
     }

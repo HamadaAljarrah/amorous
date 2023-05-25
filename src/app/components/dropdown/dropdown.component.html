@@ -1,0 +1,5 @@
+<div *ngIf="items"  class="dropdown">
+    <select (input)="emit($event)">
+        <option *ngFor="let item of items" value="{{item.value}}">{{item.label}}</option>
+    </select>
+</div>

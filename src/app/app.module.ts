@@ -27,6 +27,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { NguCarouselModule } from '@ngu/carousel';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { BottleDesignComponent } from './sections/bottle-design/bottle-design.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 @NgModule({
     declarations: [
@@ -51,6 +52,7 @@ import { BottleDesignComponent } from './sections/bottle-design/bottle-design.co
         BottleComponent,
         CarouselComponent,
         BottleDesignComponent,
+        DropdownComponent,
     ],
     imports: [
         BrowserModule,

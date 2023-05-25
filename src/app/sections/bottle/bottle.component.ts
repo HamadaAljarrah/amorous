@@ -57,7 +57,7 @@ export class BottleComponent implements OnInit {
         const selectedOption = +event;
         const bottle = this.carouselItem[selectedOption];
         this.toast.close();
-        this.toast.success('Bottle set to ' + bottle.value);
+        this.toast.success('Selected ' + bottle.value);
         this.userChoiceService.setBottle(bottle.value);
         this.selectedOption = bottle.value;
     }

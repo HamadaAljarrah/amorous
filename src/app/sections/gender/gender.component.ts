@@ -28,7 +28,7 @@ export class GenderComponent implements OnInit {
 
     setOption(gender: string) {
         this.toast.close();
-        this.toast.success('Gender set to ' + gender)
+        this.toast.success('Selected ' + gender)
         this.userChoiceService.setGender(gender);
         this.selectedOption = gender;
     }

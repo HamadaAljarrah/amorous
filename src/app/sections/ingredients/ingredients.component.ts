@@ -55,7 +55,7 @@ export class IngredientsComponent implements OnInit {
         this.chosenIngredients.push(ingredient);
         this.userChoiceService.setIngridients(this.chosenIngredients);
         this.toast.close();
-        this.toast.success('Ingredient ' + ingredient.name + ' added')
+        this.toast.success('Added ' + ingredient.name)
     }
 
     removeIngredient(ingredient: Ingredient): void {

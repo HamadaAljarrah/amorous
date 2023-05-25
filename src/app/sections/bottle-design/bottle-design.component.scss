@@ -1,0 +1,101 @@
+h1 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+.form-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    width: 100%;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+input {
+    padding: 12px 16px;
+    background-color: var(--color-light);
+    border-radius: 6px;
+    border: none;
+    width: 100%;
+    flex-shrink: 1;
+    &::placeholder {
+        opacity: 0.5;
+    }
+}
+
+.bottle-wrapper {
+    padding: 60px 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    img {
+        width: 250px;
+    }
+    p {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 500;
+        color: white;
+        opacity: 0.8;
+    }
+    .textTop {
+        top: 38%;
+    }
+    .textMiddle {
+        top: 55%;
+    }
+    .textBottom {
+        top: 77%;
+    }
+}
+
+.full-height {
+    height: 100%;
+}
+.absolut {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+
+}
+.preview-btn{
+    width: 100%;
+    margin: 15px auto;
+
+}
+
+
+.dropdown {
+    display: inline-block;
+    padding: 10px 12px;
+    background-color: var(--color-light);
+    border-radius: 6px;
+    width: 100%;
+
+
+    select {
+        width: 100%;
+        color: var(--color-black);
+        border: none;
+        background: transparent;
+        outline: none;
+        font-size: 0.8rem;
+    }
+}

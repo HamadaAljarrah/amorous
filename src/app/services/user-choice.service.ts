@@ -93,7 +93,14 @@ export class UserChoiceService {
     }
 }
 
-export type BottleText = { top: string; middle: string; bottom: string };
+export type BottleText = {
+    top: string;
+    middle: string;
+    bottom: string;
+    fontStyle: string;
+    fontSize: string;
+    fontColor: string;
+};
 export type BoxText = { front: string; back: string };
 export type Ingredient = {
     name: string;

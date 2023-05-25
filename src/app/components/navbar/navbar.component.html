@@ -27,7 +27,15 @@
                 <li *ngIf="userChoice.impression"><strong>Impression: </strong> {{userChoice.impression}}</li>
                 <li *ngIf="userChoice.ingridients"><strong>Ingridients: </strong> <span *ngFor="let ing of userChoice.ingridients">{{ing.name + ", &nbsp;"}}</span></li>
                 <li *ngIf="userChoice.bottle"><strong>Bottle: </strong> {{userChoice.bottle}}</li>
-                <li *ngIf="userChoice.bottleText"><strong>Bottle text: </strong> {{userChoice.bottleText}}</li>
+                <li  *ngIf="userChoice.bottleText"><strong>Bottle text: </strong> 
+                    Top: {{userChoice.bottleText.top}}
+                    Middle: {{userChoice.bottleText.middle}}
+                    Bottom: {{userChoice.bottleText.bottom}}
+                    Color: {{userChoice.bottleText.fontColor}}
+                    Size: {{userChoice.bottleText.fontSize}}
+                    Font: {{userChoice.bottleText.fontStyle}}
+
+                </li>
                 <li *ngIf="userChoice.box"><strong>Box: </strong> {{userChoice.box}}</li>
                 <li *ngIf="userChoice.boxText"><strong>Box text: </strong> {{userChoice.boxText}}</li>
             </ul>

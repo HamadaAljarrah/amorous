@@ -10,7 +10,7 @@ body {
     --color-main: #d8a784;
     --color-black: #333333;
     --color-white: #fffefa;
-    --color-light: #f4f4f4;
+    --color-light: #f9f9f9;
     --font-h: 'Tangerine', cursive;
     --font-p: 'Work Sans', sans-serif;
     background-color: var(--color-white);
@@ -33,6 +33,12 @@ p {
     font-size: 0.8rem;
     line-height: 150%;
 }
+label{
+    color: var(--color-black);
+    font-family: var(--font-p);
+    font-size: 0.8rem;
+}
+
 
 .section {
     min-height: 100vh;

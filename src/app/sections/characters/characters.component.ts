@@ -32,7 +32,7 @@ export class CharactersComponent implements OnInit {
 
     setOption(character: string) {
         this.toast.close();
-        this.toast.success('Character set to ' + character);
+        this.toast.success('Selected ' + character);
         this.userChoiceService.setCharacter(character);
         this.selectedOption = character;
     }
