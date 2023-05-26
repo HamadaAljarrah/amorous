@@ -3,7 +3,10 @@
         position: absolute;
         left: 50%;
         top: 70%;
-        transform: translate(-50%, -50%)
+        transform: translate(-50%, -50%);
+        @media (min-width: 800px){
+            top: 80%;
+        }
     }
     .carousel {
         position: relative;

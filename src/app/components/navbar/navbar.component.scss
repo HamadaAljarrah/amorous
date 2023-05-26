@@ -32,6 +32,11 @@
         img {
             width: 100%;
         }
+        @media (min-width: 800px) {
+            width: 42px;
+            height: 42px;
+            padding: 10px;
+        }
     }
 
     @media (min-width: 601) {
@@ -40,10 +45,6 @@
             width: 40px;
             height: 40px;
             padding: 10px;
-        }
-
-        .img {
-            width: 120px;
         }
     }
 }
@@ -66,7 +67,7 @@
             strong {
                 font-weight: 600;
             }
-            p{
+            p {
                 display: inline-block;
             }
         }

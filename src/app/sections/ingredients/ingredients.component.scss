@@ -1,6 +1,11 @@
 .wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 500px;
+
 
     .header {
         padding-bottom: 10px;
@@ -34,6 +39,9 @@
             width: 100%;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
+            @media (min-width: 800px){
+                height: 55vh;
+            }
         }
   
     }

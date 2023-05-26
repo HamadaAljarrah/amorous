@@ -33,7 +33,7 @@ export class CarouselComponent {
         
     }
 
-    getCurrentBottle(){
+    getCurrentItem(){
         this.action.emit(this.myCarousel.currentSlide);
     }
 }

@@ -1,30 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    --color-main: #d8a784;
-    --color-black: #333333;
-    --color-white: #fffefa;
-    --color-light: #f9f9f9;
-    --font-h: 'Tangerine', cursive;
-    --font-p: 'Work Sans', sans-serif;
-    background-color: var(--color-white);
-}
 
 h1,
 h2,
 h3 {
     color: var(--color-main);
     font-family: var(--font-h);
-    font-size: 3rem;
-    @media (min-width: 800px) {
-        font-size: 4rem;
-    }
 }
 
 h4,
@@ -33,52 +12,16 @@ h6,
 p {
     color: var(--color-black);
     font-family: var(--font-p);
-    font-size: 0.8rem;
     line-height: 150%;
-    @media (min-width: 800px) {
-        font-size: 1rem;
-    }
 }
-label{
+
+label {
     color: var(--color-black);
     font-family: var(--font-p);
-    @media (min-width: 800px) {
-        font-size: 1rem;
-    }
-}
-
-
-.section {
-    min-height: 100vh;
-    min-height: 100dvb;
-    overflow: hidden;
-    padding-top: 65px;
-}
-
-.container {
-    max-width: 1200px;
-    width: 100%;
-    padding: 10px;
-    margin: auto;
-}
-
-.btn-primary {
-    padding: 0.6rem 1.2rem;
     font-size: 0.8rem;
-    outline: none;
-    border: none;
-    background-color: var(--color-main);
-    color: var(--color-white);
-    border-radius: 20px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
-    transition: all ease-in-out 0.2s;
-
-    &:hover {
-        background-color: var(--color-white);
-        border: solid 1px var(--color-main);
-        color: var(--color-main);
-    }
 }
+
+
 
 .sidebar-wrapper {
     position: fixed;
@@ -132,6 +75,4 @@ label{
 
 .hot-toast-bar-base {
     font-family: var(--font-p);
-
-    
 }
